@@ -2,21 +2,19 @@ package main
 
 import (
 	"fmt"
+	"strconv"
 )
 
-type role int
+func main() {
 
-func (me role) say() {
-	if me == 1 {
-		fmt.Println("我是公的。")
-	} else if me == 0 {
-		fmt.Println("我是母的。")
-	} else {
-		fmt.Println("我是沃尔玛购物袋。")
-	}
-}
+	a := 0
+	b := 0
 
-func main(){
-	var me role = 1
-	me.say()
+	func() {
+		a := 1
+		b := 2
+		fmt.Println("a + b = " + strconv.Itoa(a+b))
+	}()
+
+	fmt.Println("a + b = " + strconv.Itoa(a+b))
 }
